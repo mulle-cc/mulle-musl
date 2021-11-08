@@ -1,0 +1,26 @@
+#! /bin/sh
+
+mulle_sdk="`dirname -- "$0" `"
+mulle_sdk="`dirname -- "${mulle_sdk}" `"
+
+case "$*" in
+   *\.[cm]\ *|*\.[cm])
+   ;;
+
+   *)
+      libdir="${mulle_sdk}/lib"
+      exec mulle-clang \
+-static \
+-nostdlib \
+-Wl,-export-dynamic \
+-L "${libdir}" \
+"${libdir}/Scrt1.o" \
+"${libdir}/crti.o" \
+"$@" \
+-lc \
+"${libdir}/crtn.o"
+   ;;
+esac
+
+includedir="${mulle_sdk}/include"
+exec mulle-clang -D__MULLE_STATICALLY_LINKED__ -nostdinc -static -isystem "${includedir}" "$@"
