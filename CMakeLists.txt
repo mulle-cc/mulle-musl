@@ -1,6 +1,8 @@
 cmake_minimum_required( VERSION 3.0)
 
 project( mulle-objc-musl NONE)
+add_definitions( -DMULLE_MUSL_GCC_EXTERN_GLOBAL=extern)
+
 
 set( PROJECT_VERSION "0.0.1")
 
