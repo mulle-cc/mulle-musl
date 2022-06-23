@@ -29,9 +29,12 @@
 #   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 #   POSSIBILITY OF SUCH DAMAGE.
 #
-[ "${TRACE}" = 'YES' -o "${MULLE_ENV_BASH_COMPLETION_SH_TRACE}" = 'YES' ] && set -x && : "$0" "$@"
+[ "${TRACE}" = 'YES' -o "${MULLE_ENV_BASH_COMPLETION_SH_TRACE:-}" = 'YES' ] && set -x && : "$0" "$@"
 
 
+#
+# Old and stale :( :( :(
+#
 _mulle_env_style_complete()
 {
    local cur=${COMP_WORDS[COMP_CWORD]}
