@@ -4,7 +4,7 @@
 
 Basically add mulle-objc-musl as a dependency and put musl-mulle-clang as your CC.
 
-```
+``` sh
 mulle-sde dependency add --github mulle-objc mulle-objc-musl
 mulle-sde environment set CC musl-mulle-clang
 ```
