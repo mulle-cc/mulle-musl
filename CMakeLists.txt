@@ -1,21 +1,10 @@
 cmake_minimum_required( VERSION 3.0)
 
 project( mulle-objc-musl NONE)
-add_definitions( -DMULLE_MUSL_GCC_EXTERN_GLOBAL=extern)
 
+message( STATUS "${PROJECT_NAME} just contains dependencies")
 
-set( PROJECT_VERSION "0.0.1")
-
-set( SCRIPTS
-   musl-mulle-clang
-)
-
-INSTALL( FILES ${SCRIPTS}
-PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
-            GROUP_EXECUTE GROUP_READ
-            WORLD_EXECUTE WORLD_READ
-DESTINATION "bin")
-
+set( PROJECT_VERSION "0.0.2")
 
 ######
 #

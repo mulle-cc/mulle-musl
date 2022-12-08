@@ -1,13 +1,27 @@
-# mulle-objc-musl
+# mulle-musl
 
-🐚 Build mulle-objc with mulle-clang and musl
+🐚 Build the musl C library for static executables
 
-Basically add mulle-objc-musl as a dependency and put musl-mulle-clang as your CC.
+[musl](https://musl.libc.org/) is a small C library, that can be used to
+produce fully static executables. With mulle-musl, you can turn any
+*mulle-objc* project into one based on *musl*.
+
+
+## Add mulle-musl-cc to your mulle-sde project
+
+Add `mulle-musl` and `mulle-musl-cc` as dependencies and set `mulle-clang.musl`
+as your `CC` and `COBJC`.
 
 ``` sh
-mulle-sde dependency add --github mulle-objc mulle-objc-musl
-mulle-sde environment set CC musl-mulle-clang
+mulle-sde dependency add --marks no-header,only-craft-sdk-musl --github mulle-cc mulle-musl
+mulle-sde dependency set mulle-musl aliases c
+mulle-sde dependency add --marks no-header,no-link,only-craft-sdk-musl --github mulle-cc mulle-musl-cc
+mulle-sde dependency move mulle-musl-cc top
+mulle-sde dependency move mulle-musl top
 ```
+
+Then set your `MULLE_CRAFT_SDKS` to include "musl", like
+`mulle-sde env --global set --append MULLE_CRAFT_SDKS musl`.
 
 
 ## Caveats
