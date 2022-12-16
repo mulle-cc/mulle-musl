@@ -1,0 +1,16 @@
+{
+   "name" : "mulle-musl",
+   "version" : "0.0.2",
+   "description" : "🐚 Build the musl C library for static executables",
+   "homepage" : "https://github.com/mulle-objc/mulle-objc-musl",
+   "bugs" : "https://github.com/mulle-objc/mulle-objc-musl/issues",
+   "keywords" : [],
+   "license" : "UNLICENSED",
+   "repository" : {
+      "type" : "git",
+      "url" : "mulle-objc/mulle-objc-musl"
+   },
+   "dependencies" : {
+      "musl" : "https://musl.libc.org/releases/musl-1.2.3.tar.gz#semver:^1.2.3"
+   }
+}
