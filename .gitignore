@@ -66,3 +66,5 @@ dox/super/calls-legacy.md
 .mulle-make-build-dir
 version.old
 .ackrc
+mulle-template-composer-*
+mulle-markdown-preview-*.html

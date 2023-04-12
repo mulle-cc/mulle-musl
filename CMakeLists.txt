@@ -4,7 +4,7 @@ project( mulle-objc-musl NONE)
 
 message( STATUS "${PROJECT_NAME} just contains dependencies")
 
-set( PROJECT_VERSION "0.0.2")
+set( PROJECT_VERSION "0.0.3")
 
 ######
 #
