@@ -1,2 +1,2 @@
 craftinfo/musl-craftinfo;local;no-delete,no-header,no-link,no-share,no-subproject,no-update,only-craft-sdk-musl;E50DA259-01BD-4ABE-A2B9-A6E6868DCA5D;;;;;
-musl;${MUSL_NODETYPE:-tar};no-all-load,no-cmake-loader,no-cmake-searchpath,no-header,no-import,no-link,only-craft-sdk-musl;CE78445B-FCF4-4192-890D-E16BF8991F2E;${MUSL_URL:-https://musl.libc.org/releases/musl-${MULLE_TAG}.tar.gz};${MUSL_BRANCH};${MUSL_TAG:-1.2.3};;aliases=c
+musl;${MUSL_NODETYPE:-tar};no-all-load,no-cmake-loader,no-cmake-searchpath,no-header,no-import,no-link,only-craft-sdk-musl;CE78445B-FCF4-4192-890D-E16BF8991F2E;${MUSL_URL:-https://musl.libc.org/releases/musl-${MULLE_TAG}.tar.gz};${MUSL_BRANCH};${MUSL_TAG:-1.2.4};;aliases=c

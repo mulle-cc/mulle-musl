@@ -1,3 +1,7 @@
+### 0.0.4
+
+* update to musl 1.2.4
+
 ### 0.0.3
 
 * remove package.json as it conflicts with clib.json
